@@ -1,0 +1,12 @@
+@import url('https://fonts.cdnfonts.com/css/pt-sans-2');
+
+body {
+  margin: 0;
+  font-family: 'PT Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'PT Sans', sans-serif;
+}

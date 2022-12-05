@@ -1,0 +1,17 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));    
+  align-items: center;
+  justify-items: center;
+  margin: 0px;
+  padding: 0px
+}
+
+.guideDiv{
+width: 90%;
+padding: 0px;
+margin: 0px;
+}
+
+
+
