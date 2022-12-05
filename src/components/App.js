@@ -1,16 +1,36 @@
-import './App.css';
-import Header from './Header';
-import Links from "./Links"
-import Guides from "./Guides"
+import React , { useState, useEffect } from 'react'
 
-function App() {
+import "./App.css";
+
+import Header from "./Header";
+import Links from "./Links";
+import Navigation from "./Navigation";
+import Tabs from "./Tabs";
+
+
+export default function App() {
+  const [tab, setTab] = useState("Guides")
+
+  useEffect(() => {
+    
+    document.getElementById("tabs").scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  });
+
+ 
+
+  const handleClick = (e) => {
+setTab(e.target.name)
+    
+  };
+
+
   return (
     <div className="App">
-      <Header></Header>
-      <Links></Links>
-      {/* <Guides></Guides> */}
+      <Header />
+      <Links />
+      <Navigation handleClick={handleClick} />
+      <div id = "tabs"></div>
+      <Tabs tab = {tab} />
     </div>
   );
 }
-
-export default App;

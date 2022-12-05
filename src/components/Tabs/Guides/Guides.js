@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Guides.module.css";
 import GuideHeader from "./GuideHeader";
 import GuideContent from "./GuideContent";
-import guides from "../../db/guides.json";
+import guides from "../../../db/guidesDB.json";
 
 export default function Guides() {
   return (
@@ -12,7 +12,7 @@ export default function Guides() {
           <div className={styles.guideDiv}>
             {" "}
             <GuideHeader name={name} link={link} />
-            <GuideContent link={link} />
+            <GuideContent name={name} link={link} />
           </div>
         );
       })}

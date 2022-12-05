@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./GuideHeader.module.css"
 
 export default function GuideHeader({ children, name, link}) {
-  console.log(name);
   return (
     <div className={styles.center}>
       <p>{name}</p>
