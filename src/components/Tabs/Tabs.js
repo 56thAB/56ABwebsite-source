@@ -1,6 +1,6 @@
 import React from "react";
 import Guides from "./Guides";
-import AboutUs from "./About Us";
+import AboutUs from "./AboutUs";
 
 
 

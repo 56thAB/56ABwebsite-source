@@ -14,9 +14,9 @@
     background: transparent;
     color: #000000;
     box-shadow: 0 0 0 3px #000000 inset;
-    background-color: aliceblue;
-   
-    
+    background-color: rgb(255, 255, 255);
+    width: 25rem;
+
 }
 .button:hover{
     transform: translateY(-2px);
