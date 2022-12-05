@@ -1,4 +1,4 @@
-import React , { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 
 import "./App.css";
 
@@ -7,30 +7,30 @@ import Links from "./Links";
 import Navigation from "./Navigation";
 import Tabs from "./Tabs";
 
-
 export default function App() {
-  const [tab, setTab] = useState("Guides")
+  const [tab, setTab] = useState("");
 
   useEffect(() => {
-    
-    document.getElementById("tabs").scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    document
+      .getElementById("tabs")
+      .scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
   });
 
- 
-
   const handleClick = (e) => {
-setTab(e.target.name)
-    
+    setTab(e.target.name);
   };
-
 
   return (
     <div className="App">
       <Header />
       <Links />
       <Navigation handleClick={handleClick} />
-      <div id = "tabs"></div>
-      <Tabs tab = {tab} />
+      <div id="tabs"></div>
+      <Tabs tab={tab} />
     </div>
   );
 }
