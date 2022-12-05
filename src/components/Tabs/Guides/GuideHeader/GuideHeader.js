@@ -3,7 +3,7 @@ import styles from "./GuideHeader.module.css";
 
 export default function GuideHeader({ children, name, link }) {
   return (
-    <div className={styles.center}>
+    <div className={styles.center} id = {"guide"}>
       <p className={styles.text}>{name}</p>
       <a target="_blank" href={link}>
         <img

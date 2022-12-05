@@ -1,7 +1,10 @@
 .guide {
     border: 0.2rem solid rgb(0, 0, 0);
-    width:100%;
+    width:70%;
     height: 50rem; 
     background-color: white;
     border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
