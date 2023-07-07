@@ -14,9 +14,54 @@
   },
   {
     "name": "War assets",
-    "link": ""
-  }, {
-    "name":"Callouts",
-    "link":"asdsadsasad"
+    "link": "https://docs.google.com/document/d/e/2PACX-1vREuq-6_3qfCpvKxdRCMGoNuHfigRCjtxdgK-NpFEnxjZxeoYyv5sRSsUWNiTWKDfrd0lRuEdh5-4AO/pub?embedded=true",
+    "images": [
+      {
+        "url": "https://cdn.discordapp.com/attachments/722546782881448056/1061399631860342876/image.png",
+        "title": "Perfect Armoury"
+      }
+    ]
+  },
+  {
+    "name": "Callouts",
+    "link": null,
+    "images": [
+      {
+        "url": "https://drive.google.com/uc?export=view&id=1JRJEljv-fSbLg_9u-htLkRL7jtzXwpVy        ",
+        "title": "Triple stack top floor",
+        "anchor": "triple-stack-top"
+      },
+      {
+        "url": "https://drive.google.com/uc?export=view&id=1J2z4y-ZFTcZb8zhCPxbqww9ySuqMVtc1        ",
+        "title": "Triple stack bottom floor",
+        "anchor": "triple-stack-bottom"
+      },
+      {
+        "url": "https://drive.google.com/uc?export=view&id=1MnPyRiKZXIvRMeY_Q9tT1ruv0uOTQQjD",
+        "title": "Double Stack",
+        "anchor": "double-stack"
+      },
+      {
+        "url": "https://drive.google.com/uc?export=view&id=1jKbmHb7oUr5xNLqdymF110CZQQZ1LJ_e",
+        "title": "Powerhouse",
+        "anchor": "powerhouse"
+      },
+      {
+        "url": "https://drive.google.com/uc?export=view&id=17Bu_agnKNZ6oQROybOywi0K0yrlSln4J        ",
+        "title": "Spiral building top floor",
+        "anchor": "spiral-top"
+      },
+      {
+        "url": "https://drive.google.com/uc?export=view&id=14JfLbm5RH1YE284JC4_AJObvwxnRzDHV",
+        "title": "Spiral building bottom floor",
+        "anchor": "spiral-bottom"
+      },
+
+      {
+        "url": "https://drive.google.com/uc?export=view&id=1sl1NRYAkVlbQQ8utBO2BVViqeuL4akzs        ",
+        "title": "V building / Chevron",
+        "anchor": "chevron"
+      }
+    ]
   }
 ]
