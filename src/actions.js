@@ -2,6 +2,7 @@ export const SET_CONTENT = "SET_CONTENT";
 export const SET_CONTENT_LOADING = "SET_CONTENT_LOADING";
 export const SET_CONTENT_SUCCESS = "SET_CONTENT_SUCCESS";
 export const SET_CONTENT_FAIL = "SET_CONTENT_FAIL";
+export const UPDATE_INPUT_MESSAGE = "UPDATE_INPUT_MESSAGE";
 
 export const setContentLoading = () => {
   return {

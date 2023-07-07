@@ -18,6 +18,8 @@ import ArticleIcon from "@mui/icons-material/Article";
 import InfoIcon from "@mui/icons-material/Info";
 import { CardMedia } from "@mui/material";
 import { setContent } from "../../actions";
+import HomeIcon from "@mui/icons-material/Home";
+import ChatIcon from "@mui/icons-material/Chat";
 
 import Guides from "../Guides";
 import AboutUs from "../AboutUs";
@@ -26,24 +28,11 @@ import db from "../../db/guidesDB.json";
 
 const drawerWidth = 240;
 
-export default function DrawerLeft() {
-  const dispatch = useDispatch();
-  const { loading } = useSelector((state) => state.content);
-
-  const [display, setDisplay] = useState("1");
-
+export default function DrawerLeft({ children }) {
   const [open, setOpen] = useState(true);
-
-  const handleContentClick = (id) => {
-    setDisplay(id);
-  };
 
   const handleGuidesClick = () => {
     setOpen(!open);
-  };
-
-  const contentClick = (link) => {
-    dispatch(setContent(link));
   };
 
   return (
@@ -66,12 +55,27 @@ export default function DrawerLeft() {
         </Toolbar>
         <Divider />
         <List>
-          <ListItemButton onClick={() => handleContentClick("1")}>
+          <ListItemButton>
+            <ListItemIcon>
+              <HomeIcon />
+            </ListItemIcon>
+            <ListItemText primary="Home" />
+          </ListItemButton>
+
+          <ListItemButton>
+            <ListItemIcon>
+              <ChatIcon />
+            </ListItemIcon>
+            <ListItemText primary="Chat" />
+          </ListItemButton>
+
+          <ListItemButton>
             <ListItemIcon>
               <InfoIcon />
             </ListItemIcon>
             <ListItemText primary="About Us" />
           </ListItemButton>
+
           <ListItemButton onClick={handleGuidesClick}>
             <ListItemIcon>
               <FolderCopyIcon />
@@ -79,17 +83,11 @@ export default function DrawerLeft() {
             <ListItemText primary="Guides" />
             {open ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
+
           <Collapse in={open} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
               {db.map(({ name, link }) => (
-                <ListItemButton
-                  sx={{ pl: 4 }}
-                  onClick={() => {
-                    handleContentClick("2");
-                    contentClick(link);
-                  }}
-                  key={name}
-                >
+                <ListItemButton sx={{ pl: 4 }} key={name}>
                   <ArticleIcon />
                   <ListItemText primary={name} />
                 </ListItemButton>
@@ -99,8 +97,7 @@ export default function DrawerLeft() {
         </List>
         <Divider />
       </Drawer>
-      {display === "1" && <AboutUs />}
-      {display === "2" && <Guides />}
+      {children}
     </Box>
   );
 }
