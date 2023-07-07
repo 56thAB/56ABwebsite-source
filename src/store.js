@@ -1,11 +1,12 @@
 // store.js
-import { configureStore } from '@reduxjs/toolkit';
-import rootReducer from './reducers/rootReducer';
+import { configureStore } from "@reduxjs/toolkit";
+import rootReducer from "./reducers/rootReducer";
 
 // Define the initial state
 const initialState = {
   chat: {
-    inputMessage: '',
+    chatInputMessage: "",
+    chatInputUsername: "",
   }, // Add initial state for chat reducer
   // Add initial state for other reducers here
 };

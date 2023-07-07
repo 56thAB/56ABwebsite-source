@@ -20,6 +20,7 @@ import { CardMedia } from "@mui/material";
 import { setContent } from "../../actions";
 import HomeIcon from "@mui/icons-material/Home";
 import ChatIcon from "@mui/icons-material/Chat";
+import { Link } from "react-router-dom";
 
 import Guides from "../Guides";
 import AboutUs from "../AboutUs";
@@ -55,28 +56,28 @@ export default function DrawerLeft({ children }) {
         </Toolbar>
         <Divider />
         <List>
-          <ListItemButton>
+          <ListItemButton LinkComponent={Link} to="/">
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
             <ListItemText primary="Home" />
           </ListItemButton>
 
-          <ListItemButton>
+          <ListItemButton LinkComponent={Link} to="/chat">
             <ListItemIcon>
               <ChatIcon />
             </ListItemIcon>
             <ListItemText primary="Chat" />
           </ListItemButton>
 
-          <ListItemButton>
+          <ListItemButton LinkComponent={Link} to="/aboutus">
             <ListItemIcon>
               <InfoIcon />
             </ListItemIcon>
             <ListItemText primary="About Us" />
           </ListItemButton>
 
-          <ListItemButton onClick={handleGuidesClick}>
+          <ListItemButton onClick={handleGuidesClick} LinkComponent={Link} to="/guides">
             <ListItemIcon>
               <FolderCopyIcon />
             </ListItemIcon>
@@ -87,7 +88,7 @@ export default function DrawerLeft({ children }) {
           <Collapse in={open} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
               {db.map(({ name, link }) => (
-                <ListItemButton sx={{ pl: 4 }} key={name}>
+                <ListItemButton sx={{ pl: 4 }} key={name} LinkComponent={Link} to={`/guides/${name.toLowerCase().replace(/\s/g, "")}`}>
                   <ArticleIcon />
                   <ListItemText primary={name} />
                 </ListItemButton>
@@ -97,7 +98,8 @@ export default function DrawerLeft({ children }) {
         </List>
         <Divider />
       </Drawer>
-      {children}
+      <div  style={{margin:"auto"}}> {children}</div>
+     
     </Box>
   );
 }

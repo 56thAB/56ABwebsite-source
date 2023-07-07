@@ -1,16 +1,15 @@
 import React from "react";
-import Header from "../components/Header";
-import DrawerLeft from "../components/DrawerLeft";
-
 import Chat from "../components/Chat";
 import Layout from "../components/Layout";
+import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 
 export default function ChatPage() {
   return (
-    <div>
-      <Layout>
-        <Chat />{" "}
-      </Layout>
-    </div>
+    <Layout>
+      <Breadcrumb to="/chat" title="Chat">
+        <p></p>
+      </Breadcrumb>
+      <Chat />
+    </Layout>
   );
 }

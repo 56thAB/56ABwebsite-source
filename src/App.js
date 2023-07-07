@@ -19,11 +19,12 @@ export default function App() {
             <Route exact path="/" component={HomePage} />
             <Route exact path="/chat" component={ChatPage} />
             <Route exact path="/guides" component={GuidesPage} />
-            <Route exact path="/about-us" component={AboutUsPage} />
+            <Route exact path="/aboutus" component={AboutUsPage} />
             {guidesDB.map((guide) => (
               <Route
                 exact
-                path={`/guides/${guide.name.toLowerCase().replace(/\s/g, "")}`}
+                key={guide.name}
+                path={`/guides/${guide.name.toLowerCase().replace(/\s/g, "")}` }
               >
                 <GuideRoute key={guide.name} guide={guide} />{" "}
               </Route>

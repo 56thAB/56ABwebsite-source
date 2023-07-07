@@ -1,5 +1,5 @@
 // chatReducer.js
-import { UPDATE_INPUT_MESSAGE } from '../actions';
+import { UPDATE_CHAT_INPUT_MESSAGE, UPDATE_CHAT_INPUT_USERNAME } from '../actions';
 
 const initialState = {
   inputMessage: '',
@@ -7,14 +7,19 @@ const initialState = {
 
 const chatReducer = (state = initialState, action) => {
   switch (action.type) {
-    case UPDATE_INPUT_MESSAGE:
+    case UPDATE_CHAT_INPUT_MESSAGE:
       return {
         ...state,
-        inputMessage: action.payload,
+        chatInputMessage: action.payload,
       };
+      case UPDATE_CHAT_INPUT_USERNAME:return {
+        ...state,
+        chatInputUsername: action.payload,
+      }
     default:
       return state;
   }
+  
 };
 
 export default chatReducer;

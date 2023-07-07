@@ -1,16 +1,15 @@
-import React from 'react'
-import { Breadcrumbs.  } from '@mui/material'
+import { Link } from "react-router-dom";
+import { Breadcrumbs } from "@mui/material";
+import React from "react";
+import styles from "./Breadcrumb.module.css"
 
-export default function Breadcrumb({children}) {
+export default function Breadcrumb({ children, title, to }) {
   return (
-    <Layout>
-    <Breadcrumbs aria-label="breadcrumb">
-      <Link to="/guides" color="inherit">
-        Guides
+    <Breadcrumbs aria-label="breadcrumb" class={styles.center}>
+      <Link to={to} color="inherit">
+        {title}
       </Link>
-      <Typography color="text.primary">{guide.name}</Typography>
+      {children}
     </Breadcrumbs>
-    <Guides link={guide.link} />
-  </Layout>
-  )
+  );
 }

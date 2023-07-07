@@ -2,7 +2,8 @@ export const SET_CONTENT = "SET_CONTENT";
 export const SET_CONTENT_LOADING = "SET_CONTENT_LOADING";
 export const SET_CONTENT_SUCCESS = "SET_CONTENT_SUCCESS";
 export const SET_CONTENT_FAIL = "SET_CONTENT_FAIL";
-export const UPDATE_INPUT_MESSAGE = "UPDATE_INPUT_MESSAGE";
+export const UPDATE_CHAT_INPUT_MESSAGE = "UPDATE_CHAT_INPUT_MESSAGE";
+export const UPDATE_CHAT_INPUT_USERNAME = "UPDATE_CHAT_INPUT_USERNAME";
 
 export const setContentLoading = () => {
   return {
@@ -36,5 +37,18 @@ export const setContent = (link) => {
         dispatch(setContentFail("Failed to load content."));
       }
 
+  };
+};
+
+export const updateChatInputMessage = (message) => {
+  return {
+    type: UPDATE_CHAT_INPUT_MESSAGE,
+    payload: message,
+  };
+};
+export const updateChatInputUsername = (username) => {
+  return {
+    type: UPDATE_CHAT_INPUT_USERNAME,
+    payload: username,
   };
 };

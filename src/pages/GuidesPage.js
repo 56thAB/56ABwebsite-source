@@ -1,18 +1,12 @@
-import Guides from "../components/Guides";
-import {Link} from "react-router-dom"
-import { Breadcrumbs,Typography } from "@mui/material";
+import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 import Layout from "../components/Layout";
 
 export default function GuidesPage() {
   return (
     <Layout>
-       <Breadcrumbs aria-label="breadcrumb">
-        <Link to="/guides" color="inherit">
-          Guides
-        </Link>
-      </Breadcrumbs>
-      <Guides />{" "}
+      <Breadcrumb to="/guides" title="Guides">
+        <p></p>
+      </Breadcrumb>
     </Layout>
   );
 }
-  
