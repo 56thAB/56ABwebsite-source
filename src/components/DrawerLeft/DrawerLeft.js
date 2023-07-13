@@ -16,18 +16,18 @@ import Collapse from "@mui/material/Collapse";
 import FolderCopyIcon from "@mui/icons-material/FolderCopy";
 import ArticleIcon from "@mui/icons-material/Article";
 import InfoIcon from "@mui/icons-material/Info";
-import { CardMedia } from "@mui/material";
-import { setContent } from "../../actions";
+
 import HomeIcon from "@mui/icons-material/Home";
 import ChatIcon from "@mui/icons-material/Chat";
 import { Link } from "react-router-dom";
+import styles from "./DrawerLeft.module.css"
 
-import Guides from "../Guides";
-import AboutUs from "../AboutUs";
+
+
 
 import db from "../../db/guidesDB.json";
 
-const drawerWidth = 240;
+const drawerWidth = 200; // Adjusted width
 
 export default function DrawerLeft({ children }) {
   const [open, setOpen] = useState(true);
@@ -37,7 +37,7 @@ export default function DrawerLeft({ children }) {
   };
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex"}}>
       <CssBaseline />
       <Drawer
         sx={{
@@ -46,39 +46,45 @@ export default function DrawerLeft({ children }) {
           "& .MuiDrawer-paper": {
             width: drawerWidth,
             boxSizing: "border-box",
+            backgroundColor: "#000000", // Set the background color to black
+            color: "white", // Set the text color to white
           },
         }}
         variant="permanent"
         anchor="left"
       >
-        <Toolbar>
-          <img src={require("./log6.png")} width="200px" margin="10px" />
+        <Toolbar style={{ marginLeft: "auto", marginRight: "auto" }}>
+          <img src={require("./img/log6.png")} className={styles.logo}/>
         </Toolbar>
-        <Divider />
+        <Divider sx={{ backgroundColor: "#7b7b7bff" }} /> {/* Set the divider color */}
         <List>
           <ListItemButton LinkComponent={Link} to="/">
-            <ListItemIcon>
+            <ListItemIcon sx={{ color: "white" }}>
               <HomeIcon />
             </ListItemIcon>
             <ListItemText primary="Home" />
           </ListItemButton>
 
           <ListItemButton LinkComponent={Link} to="/chat">
-            <ListItemIcon>
+            <ListItemIcon sx={{ color: "white" }}>
               <ChatIcon />
             </ListItemIcon>
             <ListItemText primary="Chat" />
           </ListItemButton>
 
-          <ListItemButton LinkComponent={Link} to="/aboutus">
-            <ListItemIcon>
+          {/* <ListItemButton LinkComponent={Link} to="/aboutus">
+            <ListItemIcon sx={{ color: "white" }}>
               <InfoIcon />
             </ListItemIcon>
             <ListItemText primary="About Us" />
-          </ListItemButton>
+          </ListItemButton> */}
 
-          <ListItemButton onClick={handleGuidesClick} LinkComponent={Link} to="/guides">
-            <ListItemIcon>
+          <ListItemButton
+            onClick={handleGuidesClick}
+            LinkComponent={Link}
+            to="/guides"
+          >
+            <ListItemIcon sx={{ color: "white" }}>
               <FolderCopyIcon />
             </ListItemIcon>
             <ListItemText primary="Guides" />
@@ -88,18 +94,24 @@ export default function DrawerLeft({ children }) {
           <Collapse in={open} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
               {db.map(({ name, link }) => (
-                <ListItemButton sx={{ pl: 4 }} key={name} LinkComponent={Link} to={`/guides/${name.toLowerCase().replace(/\s/g, "")}`}>
-                  <ArticleIcon />
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  key={name}
+                  LinkComponent={Link}
+                  to={`/guides/${name.toLowerCase().replace(/\s/g, "")}`}
+                >
+                  <ListItemIcon sx={{ color: "white" }}>
+                    <ArticleIcon />
+                  </ListItemIcon>
                   <ListItemText primary={name} />
                 </ListItemButton>
               ))}
             </List>
           </Collapse>
         </List>
-        <Divider />
+        <Divider sx={{ backgroundColor: "#7b7b7bff" }} /> {/* Set the divider color */}
       </Drawer>
-      <div  style={{margin:"auto"}}> {children}</div>
-     
+      <div style={{ margin: "auto" }}>{children}</div>
     </Box>
   );
 }

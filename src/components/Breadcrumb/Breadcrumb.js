@@ -5,7 +5,7 @@ import styles from "./Breadcrumb.module.css"
 
 export default function Breadcrumb({ children, title, to }) {
   return (
-    <Breadcrumbs aria-label="breadcrumb" class={styles.center}>
+    <Breadcrumbs aria-label="breadcrumb" className={styles.center}>
       <Link to={to} color="inherit">
         {title}
       </Link>

@@ -1,15 +1,24 @@
 .header {
-    background-color: black;
-    color: aliceblue;
-   font-size:4rem;
-   text-align: center;
-   margin: 0px;
-   padding: 0px;
-}
-.red{
-    color:red
+  background-color: black;
+  color: #7b7b7b;
+  font-size: 4rem;
+  /* text-align: center; */
+  /* margin: 0px; */
+  /* padding: 0px; */
+  /* top: 0; */
 }
 
-.icon{
-    fill:white;
-height: 2rem;}
+
+.red {
+  color: red;
+}
+
+.icon {
+  fill: white;
+  height: 2rem;
+  /* background-color: #5865f1;
+  border-radius: 15px;
+  padding: 5px;
+  margin:0px; */
+  box-sizing: content-box;
+}

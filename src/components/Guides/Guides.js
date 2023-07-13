@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import { useDispatch } from "react-redux";
 import { CardMedia, Container, Typography } from "@mui/material";
 import ContentLoader from "react-content-loader";
+import styles from "./Guides.module.css"
 
 export default function Guides({ guide }) {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -14,7 +15,8 @@ export default function Guides({ guide }) {
   return (
     <Box
       component="main"
-      sx={{ flexGrow: 1, bgcolor: "background.default", p: 3 }}
+      sx={{ flexGrow: 1, p: 3 }}
+      className={styles.container}
     >
       {guide.link && (
         <CardMedia
@@ -46,7 +48,7 @@ export default function Guides({ guide }) {
                   speed={2}
                   backgroundColor="#e6e6e6"
                   foregroundColor="#c4c4c4"
-                  style={{ width: "861px", height: "627px" }}
+                  style={{ width:"40rem", }}
                   id={anchor}
                 >
                   <rect x="0" y="0" rx="3" ry="3" width="861" height="627" />
@@ -59,7 +61,7 @@ export default function Guides({ guide }) {
               <img
                 src={url}
                 alt={title}
-                style={{ display: imageLoaded ? "block" : "none" }}
+                style={{ display: imageLoaded ? "block" : "none", width:"40rem" }}
                 onLoad={handleImageLoad}
                 id={anchor}
               />
