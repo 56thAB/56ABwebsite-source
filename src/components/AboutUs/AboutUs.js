@@ -8,41 +8,42 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+import styles from "./AboutUs.module.css"
 
 export default function AboutUs() {
   return (
-    <Box sx={{width:"70%", margin:"auto", marginTop:"2rem"}}>
-      <Typography variant="h5" gutterBottom>
+    <Box className={styles.text}>
+      <Typography variant="h5" gutterBottom fontFamily={'Poppins'} >
         [56AB] 56TH ASSAULT BATTALION
       </Typography>
-      <Typography variant="body1" gutterBottom>
+      <Typography variant="body1" gutterBottom fontFamily={'Poppins'}>
         Founded on 16.06.2020
       </Typography>
 
-      <Typography variant="body1" gutterBottom>
+      <Typography variant="body1" gutterBottom fontFamily={'Poppins'}>
         SERVER: ⁠cobalt | EU 🇪🇺
       </Typography>
-      <Typography variant="body1" gutterBottom>
+      <Typography variant="body1" gutterBottom fontFamily={'Poppins'}>
         FACTION: TR :tr~2:
       </Typography>
-      <Typography variant="body1" gutterBottom>
+      <Typography variant="body1" gutterBottom fontFamily={'Poppins'}>
         SPECIALIZATION: Small infantry squads
       </Typography>
 
-      <Typography variant="body1" gutterBottom>
+      <Typography variant="body1" gutterBottom fontFamily={'Poppins'}>
         🕐 ONLINE AT: We are randomly active at least 2 times a week. (You just get pinged when we play)
       </Typography>
-      <Typography variant="body1" gutterBottom>
+      <Typography variant="body1" gutterBottom fontFamily={'Poppins'}>
         ⊳ Open squads at 4:00 PM.
       </Typography>
-      <Typography variant="body1" gutterBottom>
+      <Typography variant="body1" gutterBottom fontFamily={'Poppins'}>
         ⊳ Tactical squads at 9:00 PM.
       </Typography>
-      <Typography variant="body1" gutterBottom>
+      <Typography variant="body1" gutterBottom fontFamily={'Poppins'}>
         Time above is your local (device) time
       </Typography>
 
-      <Typography variant="body1" gutterBottom>
+      <Typography variant="body1" gutterBottom fontFamily={'Poppins'}>
         DISCORD INVITE:{' '}
         <Link href="https://discord.gg/Rgh2GKwgpG" target="_blank" rel="noopener">
           https://discord.gg/Rgh2GKwgpG
@@ -50,29 +51,29 @@ export default function AboutUs() {
         (Anyone can join)
       </Typography>
 
-      <Typography variant="body1" gutterBottom>
+      <Typography variant="body1" gutterBottom fontFamily={'Poppins'}>
         📰 Description:
       </Typography>
-      <Typography variant="body1" gutterBottom>
+      <Typography variant="body1" gutterBottom fontFamily={'Poppins'}>
         There is only so much we can tell you through this ad. Therefore, how about you join our discord and make your
         own picture?
       </Typography>
 
-      <Typography variant="body1" gutterBottom>
+      <Typography variant="body1" gutterBottom fontFamily={'Poppins'}>
         We consider ourselves to be a small 🤏 newbie-friendly outfit, and our goal is to make the game fun for both new
         and experienced players regardless of gameplay style. We mostly play infantry 🪖 but don't mind aircraft ✈️ and
         ground vehicles 🚗 too (whatever feels the most enjoyable in a certain moment).
       </Typography>
 
-      <Typography variant="body1" gutterBottom>
+      <Typography variant="body1" gutterBottom fontFamily={'Poppins'}>
         ❓ Why join us?
       </Typography>
 
-      <Typography variant="body1" gutterBottom>
+      <Typography variant="body1" gutterBottom fontFamily={'Poppins'}>
         ⫸ Most importantly, we try to provide a friendly environment with no salt 🧂 (maybe a little).
       </Typography>
 
-      <Typography variant="body1" gutterBottom>
+      <Typography variant="body1" gutterBottom fontFamily={'Poppins'}>
         ⫸ We try to hold a wide range of activities:
       </Typography>
 

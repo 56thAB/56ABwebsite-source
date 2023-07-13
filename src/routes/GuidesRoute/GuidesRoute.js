@@ -12,7 +12,7 @@ export default function GuideRoute({ guide }) {
   return (
     <Layout>
       <Breadcrumb to="/guides" title="Guides">
-        <Typography> {guide.name}</Typography>
+        <Typography color="white" fontFamily='Poppins'> {guide.name}</Typography>
       </Breadcrumb>
       <Guides guide={guide} />
     </Layout>
