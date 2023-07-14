@@ -1,0 +1,9 @@
+.container{
+    background-color: rgba(0, 0, 0, 0.671);
+    padding: 1rem;
+    border-radius: 25px;
+}
+
+.applyButton{
+    margin-left: 2rem;
+}

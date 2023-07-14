@@ -1,78 +1,37 @@
-import React, { useState } from "react";
-import Box from "@mui/material/Box";
-import { useDispatch } from "react-redux";
-import { CardMedia, Container, Typography } from "@mui/material";
-import ContentLoader from "react-content-loader";
-import styles from "./Guides.module.css"
+import React from "react";
+import { Grid, Box, Typography } from "@mui/material";
+import styles from "./Guides.module.css";
 
-export default function Guides({ guide }) {
-  const [imageLoaded, setImageLoaded] = useState(false);
+import GeneratedRoutes from "../../routes/GenerateRoutes/GeneratedRoutes";
 
-  const handleImageLoad = () => {
-    setImageLoaded(true);
-  };
-
+// console.log("../." ,GeneratedRoutes[0].image)
+export default function Guides() {
   return (
     <Box
       component="main"
       sx={{ flexGrow: 1, p: 3 }}
       className={styles.container}
     >
-      {guide.link && (
-        <CardMedia
-          component="iframe"
-          sx={{
-            aspectRatio: "16/9",
-            height: "80vh",
-            maxWidth: "53rem",
-            alignSelf: "center",
-            margin: "auto",
-          }}
-          src={guide.link}
-          title="Embedded Document"
-        />
-      )}
-      {guide.images && (
-        <>
-          <br />
-          <br />
-        
-          <Typography variant="h5" component="h3" style={{textAlign:"center"}}>
-            Gallery
-          </Typography>
-          {guide.images.map(({ url, title, anchor }) => (
-            <Container key={url}>
-              {!imageLoaded && (
-                <ContentLoader
-                  viewBox="0 0 861 627"
-                  speed={2}
-                  backgroundColor="#e6e6e6"
-                  foregroundColor="#c4c4c4"
-                  style={{ width:"40rem", }}
-                  id={anchor}
-                >
-                  <rect x="0" y="0" rx="3" ry="3" width="861" height="627" />
-                  <rect x="20" y="10" rx="3" ry="3" width="300" height="10" />
-                  <rect x="20" y="30" rx="3" ry="3" width="250" height="10" />
-                  <rect x="20" y="50" rx="3" ry="3" width="200" height="10" />
-                  <rect x="20" y="70" rx="3" ry="3" width="280" height="10" />
-                </ContentLoader>
-              )}
-              <img
-                src={url}
-                alt={title}
-                style={{ display: imageLoaded ? "block" : "none", width:"40rem" }}
-                onLoad={handleImageLoad}
-                id={anchor}
-              />
-              <Typography variant="subtitle1">{title} </Typography>
-              <br />
-              <br />
-              <br />
-            </Container>
-          ))}
-        </>
-      )}
+      <Grid container spacing={2}>
+        {GeneratedRoutes.map((guide) => (
+          <Grid item xs={12} sm={6} md={4} key={guide.path}>
+            <Box
+              height={100}
+              width={300}
+              border="1px solid #ccc"
+              borderRadius={4}
+              p={2}
+              display="flex"
+              flexDirection="column"
+              justifyContent="space-between"
+              sx={{ backgroundColor: "#480000" }} // Dark red background color
+            >
+              <Typography variant="h6">{guide.name}</Typography>
+              <img src={require(`../../${guide.image}`)}></img>
+            </Box>
+          </Grid>
+        ))}
+      </Grid>
     </Box>
   );
 }

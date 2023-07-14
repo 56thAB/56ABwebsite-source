@@ -10,7 +10,9 @@ import {
 } from "@mui/material";
 import { ReactComponent as DiscordIcon } from "./img/discord.svg";
 
+import GradingIcon from "@mui/icons-material/Grading";
 import styles from "./Header.module.css";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const drawerWidth = 200;
@@ -32,7 +34,18 @@ export default function Header() {
         >
           <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              56th Assault Battalion
+              56th Assault Battalion{" "}
+              <Button
+                LinkComponent={Link}
+                to="/apply"
+                size="large"
+                sx={{ marginLeft: "2rem" }}
+                color="inherit"
+                startIcon={<GradingIcon />}
+              >
+                {" "}
+                Join us now!
+              </Button>
             </Typography>
 
             <Tooltip

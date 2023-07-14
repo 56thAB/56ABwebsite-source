@@ -21,11 +21,10 @@ import HomeIcon from "@mui/icons-material/Home";
 import ChatIcon from "@mui/icons-material/Chat";
 import { Link } from "react-router-dom";
 import styles from "./DrawerLeft.module.css"
+import GeneratedRoutes from "../../routes/GenerateRoutes/GeneratedRoutes";
 
 
 
-
-import db from "../../db/guidesDB.json";
 
 const drawerWidth = 200; // Adjusted width
 
@@ -79,6 +78,7 @@ export default function DrawerLeft({ children }) {
             <ListItemText primary="About Us" />
           </ListItemButton> */}
 
+<Divider sx={{ backgroundColor: "#7b7b7bff" }} /> {/* Set the divider color */}
           <ListItemButton
             onClick={handleGuidesClick}
             LinkComponent={Link}
@@ -93,12 +93,11 @@ export default function DrawerLeft({ children }) {
 
           <Collapse in={open} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              {db.map(({ name, link }) => (
-                <ListItemButton
+              {GeneratedRoutes.map(({ name, path}) => (
+                <ListItemButton LinkComponent={Link}
                   sx={{ pl: 4 }}
                   key={name}
-                  LinkComponent={Link}
-                  to={`/guides/${name.toLowerCase().replace(/\s/g, "")}`}
+                  to={path}
                 >
                   <ListItemIcon sx={{ color: "white" }}>
                     <ArticleIcon />
@@ -109,7 +108,6 @@ export default function DrawerLeft({ children }) {
             </List>
           </Collapse>
         </List>
-        <Divider sx={{ backgroundColor: "#7b7b7bff" }} /> {/* Set the divider color */}
       </Drawer>
       <div style={{ margin: "auto" }}>{children}</div>
     </Box>

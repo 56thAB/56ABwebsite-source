@@ -6,10 +6,13 @@ import styles from "./Breadcrumb.module.css";
 export default function Breadcrumb({ children, title, to }) {
   return (
     <Breadcrumbs aria-label="breadcrumb" className={styles.center}>
-      <NavLink to={to} className={styles.text} >
+      <NavLink to={to} className={styles.text}>
         {title}
       </NavLink>
-      {children}
+      <Breadcrumbs aria-label="breadcrumb" >
+        <Typography className={styles.text} >{children}</Typography>
+        
+      </Breadcrumbs>
     </Breadcrumbs>
   );
 }

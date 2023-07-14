@@ -1,19 +1,19 @@
-import React from 'react'
-import DrawerLeft from '../DrawerLeft'
-import Header from '../Header'
+import React from 'react';
+import DrawerLeft from '../DrawerLeft';
+import Header from '../Header';
 
-export default function Layout({children}) {
+export default function Layout({ children, image }) {
   return (
     <>
       <header>
-       <Header  > </Header>
+        <Header />
       </header>
-      <main>
-       <DrawerLeft> {children}</DrawerLeft>
+      <main style={{ backgroundImage: image ? `url(${image})` : 'none' }}>
+        <DrawerLeft>{children}</DrawerLeft>
       </main>
       <footer>
         {/* Render your footer component here */}
       </footer>
     </>
-  )
+  );
 }
