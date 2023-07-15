@@ -32,7 +32,6 @@ export default function App() {
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/chat" component={ChatPage} />
-              {/* Wrap the content that needs a custom scrollbar */}
               <Route exact path="/guides">
                   <GuidesPage />
               </Route>
