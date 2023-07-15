@@ -9,7 +9,7 @@ import {
   Tooltip,
 } from "@mui/material";
 import { ReactComponent as DiscordIcon } from "./img/discord.svg";
-
+import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import GradingIcon from "@mui/icons-material/Grading";
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
@@ -45,6 +45,17 @@ export default function Header() {
               >
                 {" "}
                 Join us now!
+              </Button>
+              <Button
+                LinkComponent={Link}
+                to="/apply"
+                size="large"
+                sx={{ marginLeft: "2rem" }}
+                color="inherit"
+                startIcon={<GroupAddIcon />}
+              >
+                {" "}
+                Platoon up with us!
               </Button>
             </Typography>
 

@@ -14,42 +14,42 @@ import Breadcrumb from "../../../components/Breadcrumb";
 
 const currencyData = [
   {
-    name: "Certification Points",
-    description:
-      "Most used currency in Planetside 2, with it you can buy Upgrades and Weapons.",
-    image: "./img/Cert.png",
+  name: "Certification Points",
+  description:
+  "The most widely used currency in Planetside 2, Certification Points allow you to purchase upgrades and weapons.",
+  image: "./img/Cert.png",
   },
   {
-    name: "Nanites",
-    description:
-      "Currency used for spawning in Vehicles, Aircraft, MAX-Units, Grenades, and utility equipment. You always gain 50 per minute, so keep spending them!",
-    image: "./img/Nanites.png",
+  name: "Nanites",
+  description:
+  "Nanites are the currency used for spawning vehicles, aircraft, MAX-Units, grenades, and utility equipment. You accumulate 50 Nanites per minute, so it's important to spend them wisely.",
+  image: "./img/Nanites.png",
   },
   {
-    name: "Merit",
-    description:
-      "Obtained by defending/capturing Facilities. These can be spent at the Sanctuaries Outfit vendor for minor cosmetics and tactical equipment (More on that in lesson-2-infantry)",
-    image: "./img/Merit.png",
+  name: "Merit",
+  description:
+  "Merits are obtained by defending or capturing facilities. They can be spent at the Sanctuaries Outfit vendor for minor cosmetics and tactical equipment.",
+  image: "./img/Merit.png",
   },
   {
-    name: "ISO-4",
-    description:
-      "Currency obtained through completing special Missions and participating in alerts. ISO-4 is used for obtaining and upgrading Implants, small modifications which can give a twist to your playstyle. (More on that in lesson-2-infantry)",
-    image: "./img/ISO-4.png",
+  name: "ISO-4",
+  description:
+  "ISO-4 is a currency acquired through completing special missions and participating in alerts. It is used for obtaining and upgrading Implants, which are small modifications that can enhance your playstyle.",
+  image: "./img/ISO-4.png",
   },
   {
-    name: "A7",
-    description:
-      "Obtained through special Missions, they also can be randomly found on the map, albeit extremely rare (don't search for it). It can be used for special Items at the black market vendor in Sanctuary.",
-    image: "./img/A7.png",
+  name: "A7",
+  description:
+  "A7 can be obtained through special missions or found randomly on the map, although it is extremely rare. It can be used for purchasing special items at the black market vendor in Sanctuary.",
+  image: "./img/A7.png",
   },
   {
-    name: "Daybreak Cash",
-    description:
-      "Currency obtained by spending your mommies money on Planetside. With it, you can purchase some cosmetics and weapon skins (everything else is not worth it). The primary thing we're going to look into are Certification Points, as these are the most common and important form of currency.",
-    image: "./img/Wrelcoin.png",
+  name: "Daybreak Cash",
+  description:
+  "Daybreak Cash is acquired by purchasing it with real money. It allows you to buy cosmetics and weapon skins in Planetside. However, for the purpose of this guide, we will focus primarily on Certification Points, as they are the most common and important form of currency.",
+  image: "./img/Wrelcoin.png",
   },
-];
+  ];
 
 export default function Currencies() {
   return (

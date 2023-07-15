@@ -7,7 +7,7 @@ export default function Potatoini() {
   return (
     <Layout>
       <Breadcrumb to="/guides" title="Guides">
-        Game Settings
+       Potato.ini 
       </Breadcrumb>
 
       <Container
@@ -37,17 +37,15 @@ export default function Potatoini() {
         </Typography>
 
         <Typography variant="h6" sx={{ marginTop: "1.5rem" }}>
-          Proof:{" "}
-          <br />
+          Proof: <br />
           <iframe
-  width="100%"
-  height="400px"
-  src="https://www.youtube.com/embed/4cXekLslYpY"
-  title="YouTube video player"
-  frameBorder="0" // Update 'frameborder' to 'frameBorder'
-  allowFullScreen // Update 'allowfullscreen' to 'allowFullScreen'
-></iframe>
-
+            width="100%"
+            height="400px"
+            src="https://www.youtube.com/embed/4cXekLslYpY"
+            title="YouTube video player"
+            frameBorder="0" // Update 'frameborder' to 'frameBorder'
+            allowFullScreen // Update 'allowfullscreen' to 'allowFullScreen'
+          ></iframe>
         </Typography>
 
         <Typography variant="h6" sx={{ marginTop: "2rem" }}>
@@ -64,41 +62,41 @@ export default function Potatoini() {
         </Typography>
         <pre>
           {`
-            [Rendering]
-            OverallQuality=-1
-            GraphicsQuality=1
-            TextureQuality=0
-            ShadowQuality=0
-            LightingQuality=1
-            EffectsQuality=1
-            TerrainQuality=1
-            FloraQuality=4
-            ModelQuality=3
-            Gamma=0.550000
-            VerticalFOV=80
-            ParticleLOD=0
-            ParticleDistanceScale=0.650000
-            FogShadowsEnable=0
-            MotionBlur=0
-            VSync=0
-            AO=0
-            MaximumFPS=250
-            UseLod0a=0
-            BloomEnabled=0
-            Smoothing=0
-            SmoothingMaxFramerate=150
-            SmoothingMinFramerate=60
-            UseAspectFOV=0
-            UseGlobalRenderDistance=0
-            RenderDistance=150.000000
-            InfantryRenderDistance=150.000000
-            GroundVehicleRenderDistance=800.000000
-            AirVehicleRenderDistances=1000.000000
-            UnderwaterGodRaysQuality=1
-            AAQuality=-1
-            SSLRQuality=0
-            Tessellation=0
-            WaterQuality=0`}
+[Rendering]
+OverallQuality=-1
+GraphicsQuality=1
+TextureQuality=0
+ShadowQuality=0
+LightingQuality=1
+EffectsQuality=1
+TerrainQuality=1
+FloraQuality=4
+ModelQuality=3
+Gamma=0.550000
+VerticalFOV=80
+ParticleLOD=0
+ParticleDistanceScale=0.650000
+FogShadowsEnable=0
+MotionBlur=0
+VSync=0
+AO=0
+MaximumFPS=250
+UseLod0a=0
+BloomEnabled=0
+Smoothing=0
+SmoothingMaxFramerate=150
+SmoothingMinFramerate=60
+UseAspectFOV=0
+UseGlobalRenderDistance=0
+RenderDistance=150.000000
+InfantryRenderDistance=150.000000
+GroundVehicleRenderDistance=800.000000
+AirVehicleRenderDistances=1000.000000
+UnderwaterGodRaysQuality=1
+AAQuality=-1
+SSLRQuality=0
+Tessellation=0
+WaterQuality=0`}
         </pre>
 
         <Typography variant="h6" sx={{ marginTop: "2rem" }}>
