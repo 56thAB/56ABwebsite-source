@@ -10,7 +10,6 @@ import AboutUsPage from "./pages/AboutUs";
 import ApplyPage from "./pages/ApplyPage";
 import Layout from "./components/Layout";
 import generatedRoutes from "./routes/GenerateRoutes/GeneratedRoutes";
-import { Scrollbars } from "react-custom-scrollbars";
 
 const GuideComponents = {};
 
@@ -30,15 +29,12 @@ export default function App() {
     <Provider store={store}>
       <Router>
         <Suspense fallback={<Layout>Loading...</Layout>}>
-          <Scrollbars style={{ width: "100%", height: "100vh" }} className="customScrollbar">
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/chat" component={ChatPage} />
               {/* Wrap the content that needs a custom scrollbar */}
               <Route exact path="/guides">
-                <Scrollbars style={{ width: "100%", height: "100%" }}>
                   <GuidesPage />
-                </Scrollbars>
               </Route>
               <Route exact path="/aboutus" component={AboutUsPage} />
               <Route exact path="/apply" component={ApplyPage} />
@@ -51,7 +47,6 @@ export default function App() {
                 />
               ))}
             </Switch>
-          </Scrollbars>
         </Suspense>
       </Router>
     </Provider>

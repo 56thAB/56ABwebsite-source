@@ -2,8 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* font-family: 'Poppins', sans-serif; */
 /* font-family: 'PT Sans', sans-serif; */
+html {
+  overflow-y:visible;
+}
 body {
   margin: 0;
+  
+  width: 100%;
+
   /* font-family: 'PT Sans', sans-serif;
    */
   font-family: "Poppins", sans-serif;
@@ -12,7 +18,7 @@ body {
   padding-bottom: 3rem;
   margin: 0;
   padding: 0;
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   /* background: linear-gradient( rgba(73, 73, 73,0.8) 20%, rgba(73, 73, 73, 0.5) 20%, rgba(78,78,78, 0.5) 35%, rgba(73, 73, 73, 0.6) 35%,
    rgba(73, 73, 73, 0.8) 45%, rgba(80,80,80, 0.5) 45%, rgba(73, 73, 73, 0.8) 75%, rgba(82,82,82, 0.5) 75%),
@@ -21,6 +27,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center; */
+  /* overflow-y: overlay;  */
   background-image: url("./background.png");
   background-size: cover;
   background-position: center center;
@@ -31,4 +38,60 @@ body {
 
 code {
   font-family: "PT Sans", sans-serif;
+}
+
+
+
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #000000; /* Add this line */
+display: none;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+
+
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+/* Change the thumb color on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #292929;
+}
+
+/* Add a smooth transition effect */
+::-webkit-scrollbar-thumb:active {
+  background-color: #161616;
+}
+
+/* Customize the scrollbar width and color for Firefox */
+/* Note: Firefox uses a different syntax for scrollbar styling */
+/* You may need to use vendor prefixes for older versions of Firefox */
+/* For example: scrollbar-width, -moz-scrollbar-track-color, -moz-scrollbar-thumb-color */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #fff;
+}
+
+*::-moz-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-moz-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+*::-moz-scrollbar-thumb:hover {
+  background-color: #292929;
+}
+
+*::-moz-scrollbar-thumb:active {
+  background-color: #161616;
 }
