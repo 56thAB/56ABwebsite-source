@@ -7,14 +7,33 @@
     border-radius: 25px;
 }
 
-.box{
-    background-color:#48000067 ;
-    margin: auto;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    
+.gridItem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .img{
-  height:80px
+  height:60px;
+  max-width:70px;
+  object-fit: cover;
+}
+
+
+.gridContent{
+  display: grid;
+  grid-template-columns: 37% 63%;
+  align-items: center;
+  /* margin: auto; */
+  justify-items: center;  
+  height: 100%;
+}
+
+.button{
+  margin: auto;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  width: 300px;
+  align-self: center;
 }

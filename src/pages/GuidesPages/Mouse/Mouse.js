@@ -54,9 +54,8 @@ export default function Mouse() {
           height="400px"
           src="https://www.youtube.com/embed/QrF_e5vKqPk"
           title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+            frameBorder="0" 
+            allowFullScreen 
         ></iframe>
       </li>
 
@@ -68,9 +67,8 @@ export default function Mouse() {
           height="400px"
           src="https://www.youtube.com/embed/6AoRfv9W110"
           title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+            frameBorder="0" 
+            allowFullScreen 
         ></iframe>
       </li>
 

@@ -3,25 +3,23 @@ import { useDispatch, useSelector } from "react-redux";
 import { Typography, Divider, Link, Container } from "@mui/material";
 import Layout from "../../../components/Layout";
 import Breadcrumb from "../../../components/Breadcrumb";
-import BackgroundImageProvider from "../../../tools/BackgroundTool/BackgroundImageProvider";
 import { setBackgroundImageProperties } from "../../../actions";
 
-import backgroundImage from "./img/PotatoBackground.png";
 
 export default function Potatoini() {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  const { defaultImage} = useSelector(
-    (state) => state.backgroundImage
-  );
+  // const { defaultImage} = useSelector(
+  //   (state) => state.backgroundImage
+  // );
 
-  useEffect(() => {
-    dispatch(setBackgroundImageProperties(backgroundImage));
+  // useEffect(() => {
+  //   dispatch(setBackgroundImageProperties(backgroundImage));
 
-    return () => {
-      dispatch(setBackgroundImageProperties(defaultImage));
-    };
-  }, [dispatch, defaultImage]);
+  //   return () => {
+  //     dispatch(setBackgroundImageProperties(defaultImage));
+  //   };
+  // }, [dispatch, defaultImage]);
 
   return (
     <Layout>
@@ -62,8 +60,8 @@ export default function Potatoini() {
             height="400px"
             src="https://www.youtube.com/embed/4cXekLslYpY"
             title="YouTube video player"
-            frameBorder="0" // Update 'frameborder' to 'frameBorder'
-            allowFullScreen // Update 'allowfullscreen' to 'allowFullScreen'
+            frameBorder="0" 
+            allowFullScreen 
           ></iframe>
         </Typography>
 
