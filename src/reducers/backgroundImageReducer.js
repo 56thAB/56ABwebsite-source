@@ -1,15 +1,15 @@
-import { SET_BACKGROUND_IMAGE_LINK } from '../actions';
-
+import { SET_BACKGROUND_IMAGE_PROPERTIES } from "../actions";
 const initialState = {
-  link: "",
+  defaultImage: "default-image-url",
+  newImage: "new-image-url",
 };
 
 const backgroundImageReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_BACKGROUND_IMAGE_LINK:
+    case SET_BACKGROUND_IMAGE_PROPERTIES:
       return {
         ...state,
-        link: action.payload,
+        newImage: action.payload,
       };
     default:
       return state;

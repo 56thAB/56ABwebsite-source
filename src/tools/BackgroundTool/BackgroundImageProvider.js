@@ -2,14 +2,14 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 export default function BackgroundImageProvider({ children }) {
-  const backgroundImageLink = useSelector(
-    (state) => state.backgroundImage.link
+  const image = useSelector(
+    (state) => state.backgroundImage.newImage
   );
 
   return (
     <div
       style={{
-        backgroundImage: `url("${backgroundImageLink}")`,
+        backgroundImage: `url("${image}")`,
         backgroundSize: "cover",
         backgroundPosition: "center center",
         backgroundAttachment: "fixed",
