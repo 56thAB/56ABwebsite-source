@@ -11,21 +11,19 @@ import ApplyPage from "./pages/ApplyPage";
 import Layout from "./components/Layout";
 import generatedRoutes from "./routes/GenerateRoutes/GeneratedRoutes";
 
+
 const GuideComponents = {};
 
 generatedRoutes.forEach((guide) => {
     GuideComponents[guide.name] = React.lazy(() =>
       import(`./pages/GuidesPages/${guide.name}/${guide.name}`)
     );
-console.log(GuideComponents)
 });
 export default function App() {
- 
-  
 
 
   return (
-    <div className="App">
+    <div className="App" style={{backgroundImage:`url("./background.png")`}}>
     <Provider store={store}>
       <Router>
         <Suspense fallback={<Layout>Loading...</Layout>}>

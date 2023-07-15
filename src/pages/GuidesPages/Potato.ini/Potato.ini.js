@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Typography, Divider, Link, Container } from "@mui/material";
 import Layout from "../../../components/Layout";
 import Breadcrumb from "../../../components/Breadcrumb";
+import BackgroundImageProvider from "../../../tools/BackgroundTool/BackgroundImageProvider";
+import { setBackgroundImageLink } from "../../../actions";
+
+import backgroundImage from "./img/PotatoBackground.png";
 
 export default function Potatoini() {
+  const dispatch = useDispatch();
+  
+  const defaultImage = useSelector(
+    (state) => state.backgroundImage.link // Access the default image link from the Redux store
+  );
+
+  
+  useEffect(() => {
+    dispatch(setBackgroundImageLink(backgroundImage));
+
+    return () => {
+      dispatch(setBackgroundImageLink(defaultImage));
+    };
+  }, [dispatch, defaultImage]);
+
+
   return (
     <Layout>
       <Breadcrumb to="/guides" title="Guides">

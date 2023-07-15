@@ -1,14 +1,15 @@
 // store.js
 import { configureStore } from "@reduxjs/toolkit";
 import rootReducer from "./reducers/rootReducer";
-
+import backgroundImage from "./background.png"
 // Define the initial state
 const initialState = {
   chat: {
     chatInputMessage: "",
     chatInputUsername: "",
-  }, // Add initial state for chat reducer
-  // Add initial state for other reducers here
+  },  backgroundImage: {
+    link: backgroundImage,
+  },
 };
 
 // Create the Redux store

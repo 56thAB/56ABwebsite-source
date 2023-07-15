@@ -2,12 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* font-family: 'Poppins', sans-serif; */
 /* font-family: 'PT Sans', sans-serif; */
-
 body {
   margin: 0;
-  
-  width: 100%;
-
   /* font-family: 'PT Sans', sans-serif;
    */
   font-family: "Poppins", sans-serif;
@@ -16,7 +12,7 @@ body {
   padding-bottom: 3rem;
   margin: 0;
   padding: 0;
-  /* width: 100%; */
+  width: 100%;
   height: 100%;
   /* background: linear-gradient( rgba(73, 73, 73,0.8) 20%, rgba(73, 73, 73, 0.5) 20%, rgba(78,78,78, 0.5) 35%, rgba(73, 73, 73, 0.6) 35%,
    rgba(73, 73, 73, 0.8) 45%, rgba(80,80,80, 0.5) 45%, rgba(73, 73, 73, 0.8) 75%, rgba(82,82,82, 0.5) 75%),
@@ -25,8 +21,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center; */
-  /* overflow-y: overlay;  */
-  background-image: url("./background.png");
+  /* background-image: url("./background.png"); */
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -37,5 +32,3 @@ body {
 code {
   font-family: "PT Sans", sans-serif;
 }
-
-
