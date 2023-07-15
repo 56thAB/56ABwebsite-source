@@ -77,6 +77,8 @@ display: none;
 * {
   scrollbar-width: thin;
   scrollbar-color: #888 #fff;
+  display: none;
+
 }
 
 *::-moz-scrollbar-track {
