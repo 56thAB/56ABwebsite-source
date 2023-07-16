@@ -13,8 +13,11 @@ import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import GradingIcon from "@mui/icons-material/Grading";
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
+import { setBreadcrumb } from "../../actions";
 
-export default function Header() {
+import Breadcrumb from "../Breadcrumb"
+
+export default function Header( {breadcrumbs}) {
   const drawerWidth = 200;
 
   const handleDiscordClick = () => {
@@ -34,7 +37,7 @@ export default function Header() {
         >
           <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              56th Assault Battalion{" "}
+              56th Assault Battalion{" "}     
               {/* <Button
                 LinkComponent={Link}
                 to="/apply"
@@ -58,6 +61,9 @@ export default function Header() {
                 Platoon up with us!
               </Button> */}
             </Typography>
+            <Breadcrumb />
+      
+
 
             <Tooltip
               title="Our discord server. Feel free to join and look around!"

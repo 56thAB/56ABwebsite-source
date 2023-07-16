@@ -2,6 +2,7 @@
 export const UPDATE_CHAT_INPUT_MESSAGE = "UPDATE_CHAT_INPUT_MESSAGE";
 export const UPDATE_CHAT_INPUT_USERNAME = "UPDATE_CHAT_INPUT_USERNAME";
 export const SET_BACKGROUND_IMAGE_PROPERTIES = "SET_BACKGROUND_IMAGE_PROPERTIES"; // New action type
+export const SET_BREADCRUMB = "SET_BREADCRUMB";
 
 
 
@@ -24,5 +25,14 @@ export const setBackgroundImageProperties = ( newImage) => {
     payload:
       newImage,
     
+  };
+};
+
+
+
+export const setBreadcrumb = (breadcrumb) => {
+  return {
+    type: SET_BREADCRUMB,
+    payload: breadcrumb,
   };
 };

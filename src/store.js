@@ -1,6 +1,7 @@
 // store.js
 import { configureStore } from "@reduxjs/toolkit";
 import rootReducer from "./reducers/rootReducer";
+import breadcrumbReducer from "./reducers/breadcrumbReducer";
 import backgroundImage from "./background.jpg";
 
 const initialState = {
@@ -12,6 +13,7 @@ const initialState = {
     defaultImage: backgroundImage,
     newImage: backgroundImage,
   },
+  breadcrumb:["/"]
 };
 
 const store = configureStore({
