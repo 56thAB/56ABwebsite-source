@@ -11,14 +11,24 @@ export default function Breadcrumb() {
   if (data) {
     let breadcrumbs = []; // Array to store breadcrumb components
     let currentPath = "";
-    for (let i = 0; i < data.length; i++) {
-      currentPath += "" + data[i];
+    if (data.length === 0) {
+      // Add "Home" as the default breadcrumb when data is empty
       breadcrumbs.push(
-        <NavLink to={currentPath} className={styles.text} key={currentPath}>
-          {data[i]}
+        <NavLink to="/" className={styles.text} key="home">
+          Home
         </NavLink>
       );
+    } else {
+      for (let i = 0; i < data.length; i++) {
+        currentPath += "" + data[i];
+        breadcrumbs.push(
+          <NavLink to={currentPath} className={styles.text} key={currentPath}>
+            {data[i]}
+          </NavLink>
+        );
+      }
     }
+
 
     return (
       <Breadcrumbs   separator={
@@ -32,7 +42,7 @@ export default function Breadcrumb() {
         </span>
       }
       aria-label="breadcrumb" className={styles.center}>
-        {breadcrumbs} {/* Render the array of breadcrumb components */}
+       {breadcrumbs} {/* Render the array of breadcrumb components */}
       </Breadcrumbs>
     );
   }
