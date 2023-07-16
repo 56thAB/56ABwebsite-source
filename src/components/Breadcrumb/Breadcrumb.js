@@ -21,7 +21,17 @@ export default function Breadcrumb() {
     }
 
     return (
-      <Breadcrumbs aria-label="breadcrumb" className={styles.center}>
+      <Breadcrumbs   separator={
+        <span
+          style={{
+            color: 'white',
+            fontSize: '1.2em',
+          }}
+        >
+          &gt;
+        </span>
+      }
+      aria-label="breadcrumb" className={styles.center}>
         {breadcrumbs} {/* Render the array of breadcrumb components */}
       </Breadcrumbs>
     );

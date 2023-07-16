@@ -9,15 +9,15 @@ import {
   Tooltip,
 } from "@mui/material";
 import { ReactComponent as DiscordIcon } from "./img/discord.svg";
-import GroupAddIcon from '@mui/icons-material/GroupAdd';
+import GroupAddIcon from "@mui/icons-material/GroupAdd";
 import GradingIcon from "@mui/icons-material/Grading";
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
 import { setBreadcrumb } from "../../actions";
 
-import Breadcrumb from "../Breadcrumb"
+import Breadcrumb from "../Breadcrumb";
 
-export default function Header( {breadcrumbs}) {
+export default function Header({ breadcrumbs }) {
   const drawerWidth = 200;
 
   const handleDiscordClick = () => {
@@ -35,57 +35,39 @@ export default function Header( {breadcrumbs}) {
             ml: `${drawerWidth}px`,
           }}
         >
-          <Toolbar>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              56th Assault Battalion{" "}     
-              {/* <Button
-                LinkComponent={Link}
-                to="/apply"
-                size="large"
-                sx={{ marginLeft: "2rem" }}
-                color="inherit"
-                startIcon={<GradingIcon />}
-              >
-                {" "}
-                Join us now!
-              </Button>
-              <Button
-                LinkComponent={Link}
-                to="/apply"
-                size="large"
-                sx={{ marginLeft: "2rem" }}
-                color="inherit"
-                startIcon={<GroupAddIcon />}
-              >
-                {" "}
-                Platoon up with us!
-              </Button> */}
-            </Typography>
-            <Breadcrumb />
-      
+          <Toolbar sx={{ justifyContent: "space-between" }}>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <Typography variant="h6" component="div" >
+                56th Assault Battalion {">"}
+              </Typography> 
+              <Typography variant="h6" component="div"sx={{ marginLeft: "15px" }}>
+                <Breadcrumb />
+              </Typography>
+            </div>
 
-
-            <Tooltip
-              title="Our discord server. Feel free to join and look around!"
-              palcement="bottom"
-            >
-              <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="menu"
-                sx={{ mr: 2 }}
-                onClick={handleDiscordClick}
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <Tooltip
+                title="Our discord server. Feel free to join and look around!"
+                placement="bottom"
               >
-                <DiscordIcon className={styles.icon} />
-              </IconButton>
-            </Tooltip>
+                <IconButton
+                  size="large"
+                  edge="start"
+                  color="inherit"
+                  aria-label="menu"
+                  sx={{ marginRight: 2 }}
+                  onClick={handleDiscordClick}
+                >
+                  <DiscordIcon className={styles.icon} />
+                </IconButton>
+              </Tooltip>
 
-            <Button color="inherit">Login</Button>
+              {/* <Button color="inherit">Login</Button> */}
+            </div>
           </Toolbar>
         </AppBar>
       </Box>
-      {/* To display content under header */}
+      {/* To display content under the header */}
       <div style={{ minHeight: "68px" }}></div>
     </>
   );
