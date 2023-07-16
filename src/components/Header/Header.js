@@ -35,7 +35,7 @@ export default function Header() {
           <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               56th Assault Battalion{" "}
-              <Button
+              {/* <Button
                 LinkComponent={Link}
                 to="/apply"
                 size="large"
@@ -56,7 +56,7 @@ export default function Header() {
               >
                 {" "}
                 Platoon up with us!
-              </Button>
+              </Button> */}
             </Typography>
 
             <Tooltip

@@ -25,10 +25,10 @@ export default function HomePage() {
     };
   }, [dispatch, defaultImage]);
   return (
-    <Layout >
-      <Breadcrumb to="/" title="Home">
-      </Breadcrumb>
+    <>
+      {/* <Breadcrumb to="/" title="Home">
+      </Breadcrumb> */}
         <Home />
-    </Layout>
+    </>
   );
 }

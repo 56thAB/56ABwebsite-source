@@ -22,10 +22,10 @@ export default function Potatoini() {
   // }, [dispatch, defaultImage]);
 
   return (
-    <Layout>
-      <Breadcrumb to="/guides" title="Guides">
+    <>
+      {/* <Breadcrumb to="/guides" title="Guides">
        Potato.ini 
-      </Breadcrumb>
+      </Breadcrumb> */}
 
       <Container
         sx={{
@@ -137,6 +137,6 @@ WaterQuality=0`}
           that back up for flying or vehicles.
         </Typography>
       </Container>
-    </Layout>
+    </>
   );
 }

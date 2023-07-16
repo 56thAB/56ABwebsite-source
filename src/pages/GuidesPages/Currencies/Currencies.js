@@ -53,10 +53,10 @@ const currencyData = [
 
 export default function Currencies() {
   return (
-    <Layout>
-      <Breadcrumb to="/guides" title="Guides">
+    <>
+      {/* <Breadcrumb to="/guides" title="Guides">
       Currencies
-      </Breadcrumb>
+      </Breadcrumb> */}
 
       <TableContainer sx={{ width: "70%", margin: "auto", backgroundColor:"rgba(0, 0, 0, 0.68)", marginTop:"2rem",padding:"1rem", borderRadius:"25px"}}>
         <Table >
@@ -97,6 +97,6 @@ export default function Currencies() {
           </TableBody>
         </Table>
       </TableContainer>
-    </Layout>
+    </>
   );
 }

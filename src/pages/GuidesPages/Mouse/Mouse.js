@@ -5,10 +5,10 @@ import Breadcrumb from "../../../components/Breadcrumb";
 
 export default function Mouse() {
   return (
-    <Layout>
-      <Breadcrumb to="/guides" title="Guides">
+    <>
+      {/* <Breadcrumb to="/guides" title="Guides">
         Mouse Settings
-      </Breadcrumb>
+      </Breadcrumb> */}
 
       <Container
     sx={{
@@ -85,7 +85,7 @@ export default function Mouse() {
       <strong>Note 2:</strong> For Planetside, setting DPI higher than 2000 is unnecessary, as it may not have low enough sensitivity values to match your old sensitivity.
     </Typography>
   </Container>
-</Layout>
+</>
 
   );
 }

@@ -6,10 +6,10 @@ import { Typography } from "@mui/material";
 
 export default function ChatPage() {
   return (
-    <Layout>
-      <Breadcrumb to="/chat" title="Chat">
-      </Breadcrumb>
+    <>
+      {/* <Breadcrumb to="/chat" title="Chat">
+      </Breadcrumb> */}
       <Chat />
-    </Layout>
+    </>
   );
 }

@@ -6,9 +6,9 @@ import { Typography } from "@mui/material";
 export default function ApplyPage() {
 
   return (
-    <Layout>
-      <Breadcrumb to="/apply" title="How to apply">
-      </Breadcrumb>
-    </Layout>
+    <>
+      {/* <Breadcrumb to="/apply" title="How to apply">
+      </Breadcrumb> */}
+    </>
   );
 }

@@ -6,10 +6,10 @@ import { Typography } from "@mui/material";
 
 export default function AboutUsPage() {
   return (
-    <Layout>
-      <Breadcrumb to="/aboutus" title="About Us">
-      </Breadcrumb>
+    <>
+      {/* <Breadcrumb to="/aboutus" title="About Us">
+      </Breadcrumb> */}
       <AboutUs />
-    </Layout>
+    </>
   );
 }

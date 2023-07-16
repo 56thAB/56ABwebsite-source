@@ -24,10 +24,10 @@ export default function GuidesPage() {
     };
   }, [dispatch, defaultImage]);
   return (
-    <Layout>
-      <Breadcrumb to="/guides" title="Guides">
-      </Breadcrumb>
+    <>
+      {/* <Breadcrumb to="/guides" title="Guides">
+      </Breadcrumb> */}
       <Guides />
-    </Layout>
+    </>
   );
 }
