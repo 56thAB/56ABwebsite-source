@@ -7,7 +7,10 @@ export default function BackgroundImageProvider({ children }) {
     (state) => state.backgroundImage.newImage
   );
   const [backgroundImage, setBackgroundImage] = useState(image);
-
+  useEffect(() => {
+    setBackgroundImage(image);
+  }, [image]);
+  
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth<= 1050) {
