@@ -7,11 +7,11 @@
     border-radius: 25px;
 }
 
+
 .gridItem{
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .img{
@@ -21,19 +21,9 @@
 }
 
 
-.gridContent{
-  display: grid;
-  grid-template-columns: 37% 63%;
-  align-items: center;
-  /* margin: auto; */
-  justify-items: center;  
-  height: 100%;
-}
+
 
 .button{
-  margin: auto;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+
   width: 300px;
-  align-self: center;
 }

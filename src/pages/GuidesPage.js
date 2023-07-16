@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import React, {useEffect} from "react";
 import { setBackgroundImageProperties } from "../actions";
 
-import backgroundImage from "./img/guidesBackground.png"
+import backgroundImage from "./img/guidesBackground.jpg"
 
 import Guides from "../components/Guides";
 import Layout from "../components/Layout";

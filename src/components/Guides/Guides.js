@@ -12,15 +12,17 @@ export default function Guides() {
       sx={{ flexGrow: 1, p: 1 }}
       className={styles.container}
     >
-      <Grid container className={styles.gridContainer}>
+      <Grid container  >
         {GeneratedRoutes.map((guide) => (
           <Grid
             item
             xs={12}
             sm={6}
             key={guide.path}
+
           className={styles.gridItem}
           >
+            <Box my={2}>
             <Button
               LinkComponent={Link}
               to={guide.path}
@@ -34,7 +36,7 @@ export default function Guides() {
                 className={styles.img}
               />
               {guide.name}
-            </Button>
+            </Button></Box>
           </Grid>
         ))}
       </Grid>

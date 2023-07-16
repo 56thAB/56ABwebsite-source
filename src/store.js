@@ -1,7 +1,7 @@
 // store.js
 import { configureStore } from "@reduxjs/toolkit";
 import rootReducer from "./reducers/rootReducer";
-import backgroundImage from "./background.png";
+import backgroundImage from "./background.jpg";
 
 const initialState = {
   chat: {

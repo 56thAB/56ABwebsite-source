@@ -6,7 +6,7 @@ import Layout from "../components/Layout";
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 import Home from "../components/Home"
 
-import backgroundImage from "./img/homepageBackground.png"
+import backgroundImage from "./img/homepageBackground.jpg"
 import { setBackgroundImageProperties } from "../actions";
 
 export default function HomePage() {
