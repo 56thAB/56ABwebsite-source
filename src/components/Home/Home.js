@@ -19,19 +19,14 @@ import styles from "./Home.module.css";
 export default function Home() {
   return (
     <div className={styles.container}>
-      {/* <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          marginBottom: "24px",
-        }}
-      >
-        <Button variant="outlined" style={{color:"white", borderColor:"white"}}> Apply now!</Button>
-      </div>
-
-      <Typography variant="h6" style={{ color: "white" }}>
-        Why Join Us?
-      </Typography> */}
+      <iframe
+        src="https://ptb.discord.com/widget?id=722533997145489488&theme=white"
+        width="350"
+        height="500"
+        allowtransparency="true"
+        frameborder="0"
+        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+      ></iframe>
     </div>
   );
 }

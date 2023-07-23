@@ -1,17 +1,30 @@
-import React from "react";
-import { Typography, Container, Grid, Card, CardMedia } from "@mui/material";
+import React, { useState } from "react";
+import { Typography, Container, Grid, Card, CardMedia, Dialog, DialogContent } from "@mui/material";
 import Layout from "../../../components/Layout";
 import Breadcrumb from "../../../components/Breadcrumb";
 
 const vsync = require("./img/vsync.png");
 
 export default function EtraSettings() {
+  const [open, setOpen] = useState(false);
+  const [selectedImageUrl, setSelectedImageUrl] = useState(null);
+
   const images = {};
 
   for (let i = 1; i <= 8; i++) {
     // Change 3 to the total number of images you have
     images[`image${i}`] = require(`./img/settings${i}.png`);
   }
+
+  const handleImageClick = (imageUrl) => {
+    setSelectedImageUrl(imageUrl);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    setSelectedImageUrl(null);
+  };
 
   return (
     <>
@@ -36,8 +49,7 @@ export default function EtraSettings() {
         {/* Image Gallery */}
         <Grid container spacing={2} sx={{ marginTop: "1rem" }}>
           {Object.entries(images).map(([key, imageUrl]) => (
-            <Grid item xs={12} key={key}>
-              {" "}
+            <Grid item xs={12} key={key} onClick={() => handleImageClick(imageUrl)}>
               {/* Set xs={12} to occupy the full width on all screen sizes */}
               <Card>
                 <CardMedia component="img" image={imageUrl} alt={key} />
@@ -47,15 +59,23 @@ export default function EtraSettings() {
         </Grid>
         <Typography
           variant="body1"
-          sx={{ marginTop: "1rem", color: "white", fontStyle: "italic"       }}
+          sx={{ marginTop: "1rem", color: "white", fontStyle: "italic" }}
         >
-            Analysis of input lag of fullscreen, windowed and borderless windowed modes with/without vsync and triple buffering.
-
+          Analysis of input lag of fullscreen, windowed and borderless windowed modes with/without vsync and triple buffering.
         </Typography>
-        <Card>
-          <CardMedia component="img" image={vsync} />
+        <Card  onClick={() => handleImageClick(vsync)}>
+          <CardMedia component="img" image={vsync}  />
         </Card>
       </Container>
+
+      {/* Modal */}
+      <Dialog open={open} onClose={handleClose} maxWidth="lg" fullWidth >
+        <DialogContent sx={{ p: 0, backgroundColor: "transparent" }}>
+          {selectedImageUrl && (
+            <CardMedia component="img" image={selectedImageUrl} alt="Selected Image" />
+          )}
+        </DialogContent>
+      </Dialog>
     </>
   );
 }

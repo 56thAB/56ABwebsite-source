@@ -22,7 +22,7 @@ export default function EtraSettings() {
         }}
       >
         <Typography variant="h4" sx={{ marginBottom: "1rem", color: "white" }}>
-          Useful In-Game Settings
+          Useful Windows settings Settings
         </Typography>
         <Typography variant="h5" sx={{ color: "white" }}>
           {" "}
