@@ -12,31 +12,31 @@ export default function Guides() {
       sx={{ flexGrow: 1, p: 1 }}
       className={styles.container}
     >
-      <Grid container  >
+      <Grid container>
         {GeneratedRoutes.map((guide) => (
           <Grid
             item
             xs={12}
             sm={6}
             key={guide.path}
-
-          className={styles.gridItem}
+            className={styles.gridItem}
           >
             <Box my={2}>
-            <Button
-              LinkComponent={Link}
-              to={guide.path}
-              size="large"
-              color="inherit"
-              className={styles.button}
-              variant="outlined"
-            >
-              <img
-                src={require(`../../${guide.image}`)}
-                className={styles.img}
-              />
-              {guide.name}
-            </Button></Box>
+              <Button
+                LinkComponent={Link}
+                to={guide.path}
+                size="large"
+                color="inherit"
+                className={styles.button}
+                variant="outlined"
+              >
+                <img
+                  src={require(`../../${guide.image}`)}
+                  className={styles.img}
+                />
+                {guide.name}
+              </Button>
+            </Box>
           </Grid>
         ))}
       </Grid>

@@ -5,6 +5,7 @@
     margin-top: 2rem;
     padding: 1rem;
     border-radius: 25px;
+    width: 70%;
 }
 
 
@@ -26,4 +27,5 @@
 .button{
 
   width: 300px;
+gap:10px
 }
