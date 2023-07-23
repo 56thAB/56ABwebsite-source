@@ -9,43 +9,49 @@ export default function Breadcrumb() {
   const data = useSelector((state) => state.breadcrumb);
 
   if (data) {
-    let breadcrumbs = []; // Array to store breadcrumb components
-    let currentPath = "";
+    let breadcrumbs = [];
     if (data.length === 0) {
-      // Add "Home" as the default breadcrumb when data is empty
       breadcrumbs.push(
         <NavLink to="/" className={styles.text} key="home">
           Home
         </NavLink>
       );
     } else {
+      // Since 'currentPath' will store the complete path, we don't need it anymore.
+      // Instead, we can use the 'data' array directly.
       for (let i = 0; i < data.length; i++) {
-        currentPath += "" + data[i];
+        const path = data.slice(0, i + 1).join("/"); // Construct the path for the current breadcrumb
         breadcrumbs.push(
-          <NavLink to={currentPath} className={styles.text} key={currentPath}>
+          <NavLink to={`/${path}`} className={styles.text} key={path}>
             {data[i]}
           </NavLink>
         );
       }
     }
 
-
     return (
-      <Breadcrumbs   separator={
-        <span
-          style={{
-            color: 'white',
-            fontSize: '1.2em',
-          }}
-        >
-          &gt;
-        </span>
-      }
-      aria-label="breadcrumb" className={styles.center}>
-       {breadcrumbs} {/* Render the array of breadcrumb components */}
+      <Breadcrumbs
+        separator={
+          <span
+            style={{
+              color: "white",
+              fontSize: "1.2em",
+            }}
+          >
+            &gt;
+          </span>
+        }
+        aria-label="breadcrumb"
+        className={styles.center}
+      >
+        {breadcrumbs}
       </Breadcrumbs>
     );
   }
-
-
 }
+
+
+
+
+
+

@@ -38,7 +38,7 @@ export default function Header({ breadcrumbs }) {
           <Toolbar sx={{ justifyContent: "space-between" }}>
             <div style={{ display: "flex", alignItems: "center" }}>
               <Typography variant="h6" component="div" >
-                56th Assault Battalion {">"}
+                56th Assault Battalion <span style={{marginLeft:"0.7rem"}}> {">"} </span>
               </Typography> 
               <Typography variant="h6" component="div"sx={{ marginLeft: "15px" }}>
                 <Breadcrumb />
